@@ -10,7 +10,7 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom right, #eaf7ff, #ffffff);
+      background: linear-gradient(to bottom right, #f6fbff, #ffffff);
       color: #222;
     }
 
@@ -19,17 +19,19 @@
       align-items: center;
       justify-content: space-between;
       padding: 20px 40px;
-      background: #004aad;
-      color: white;
+      background: #b3e5fc; /* light sky blue */
+      color: #004aad;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header img {
-      height: 80px;
+      height: 70px;
     }
 
     header h1 {
       font-size: 28px;
       font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
     .container {
@@ -37,25 +39,27 @@
       flex-wrap: wrap;
       justify-content: space-between;
       padding: 40px;
+      gap: 20px;
     }
 
-    .info, .appointment {
-      flex: 1 1 45%;
+    .info {
+      flex: 1 1 40%;
       min-width: 320px;
-      padding: 20px;
-      background: white;
+      padding: 25px;
+      background: #f1f9ff;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
-    .info:hover, .appointment:hover {
-      transform: translateY(-5px);
+    .info:hover {
+      transform: translateY(-4px);
     }
 
     .info h2 {
       color: #d60000;
       margin-bottom: 10px;
+      text-transform: uppercase;
     }
 
     .info p {
@@ -68,25 +72,24 @@
       color: #004aad;
     }
 
-    .social {
-      margin-top: 20px;
+    .appointment {
+      flex: 1 1 50%;
+      min-width: 320px;
+      padding: 25px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    .social a {
-      text-decoration: none;
-      color: #004aad;
-      font-size: 18px;
-      margin-right: 15px;
-      transition: color 0.3s;
-    }
-
-    .social a:hover {
-      color: #d60000;
+    .appointment:hover {
+      transform: translateY(-4px);
     }
 
     .appointment h2 {
       color: #004aad;
       margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     form {
@@ -96,10 +99,11 @@
 
     input, textarea, select {
       margin: 10px 0;
-      padding: 10px;
+      padding: 12px;
       border-radius: 8px;
       border: 1px solid #ccc;
       font-size: 16px;
+      background-color: #f8faff;
     }
 
     button {
@@ -114,7 +118,7 @@
     }
 
     button:hover {
-      background-color: #d60000;
+      background-color: #0077c2;
     }
 
     .map {
@@ -131,8 +135,8 @@
     }
 
     footer {
-      background: #004aad;
-      color: white;
+      background: #b3e5fc;
+      color: #004aad;
       text-align: center;
       padding: 15px;
       font-size: 14px;
@@ -172,12 +176,6 @@
         <p><i class="fas fa-map-marker-alt"></i> 15-796NP, Road No.26, Tirumala Nagar, BN Reddy, Hyderabad - 500058</p>
         <p><i class="far fa-clock"></i> <strong>Consulting Hours:</strong> 4:00 PM - 9:00 PM</p>
       </div>
-
-      <div class="social">
-        <a href="#"><i class="fab fa-google"></i> Google Map</a>
-        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-      </div>
     </div>
 
     <div class="appointment">
@@ -186,6 +184,7 @@
         <input type="text" placeholder="Full Name" required>
         <input type="tel" placeholder="Mobile Number" required>
         <input type="email" placeholder="Email Address">
+        <input type="date" required>
         <select required>
           <option value="">Select Department</option>
           <option value="cardiology">Cardiology</option>
@@ -198,7 +197,11 @@
   </div>
 
   <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6587887038323!2d78.55112821487552!3d17.35782928809861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99a2b48d88ef%3A0x7b3c08c43d6a60b0!2sBN%20Reddy%20Nagar%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1697283645672!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+    <iframe 
+      src="https://www.google.com/maps?q=17.303045436270615,78.55077783108635&z=17&output=embed"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
   </div>
 
   <footer>
